@@ -1,8 +1,7 @@
 <template>
   <div id="listing-container">
-    <h5 class="instruction-text">Hover over titles for more info:</h5>
-    <b-button variant="outline-primary" @click="shuffleBooks">Shuffle List</b-button>
-    <b-dropdown id="dropdown-1" variant="outline-success" text="Sort By" class="m-md-2">
+    <b-button id="shuffle-btn" variant="outline-primary" @click="shuffleBooks">Shuffle List</b-button>
+    <b-dropdown id="sort-by-btn" variant="outline-warning" text="Sort By" class="m-md-2">
       <b-dropdown-item @click="sortTitle">Title (A-Z)</b-dropdown-item>
       <b-dropdown-divider></b-dropdown-divider>
       <b-dropdown-item @click="sortAuthor">Author</b-dropdown-item>
@@ -13,7 +12,7 @@
     </b-dropdown>
     <b-button
       class="addButton"
-      variant="outline-danger"
+      variant="outline-success"
       @click="newBookForm = !newBookForm"
     >Add New Book</b-button>
 
@@ -49,7 +48,7 @@
     <b-list-group>
       <b-list-group-item v-for="(book, index) of shuffledBooks" :key="index">
         <b-row>
-          <b-col cols="9">{{ book.title }}</b-col>
+          <b-col cols="9 book-title">{{ book.title }}</b-col>
           <b-col cols="3" v-show="isHovered">
             <b-row>
               <b-col class="p-0 details" cols="9" @click="getDetails(index)">Details</b-col>
@@ -141,6 +140,15 @@ export default {
 
 
 <style scoped>
+#shuffle-btn {
+  color: white;
+}
+#sort-by-btn {
+  color: white !important;
+}
+.addButton {
+  color: white;
+}
 .btn {
   margin: 10px;
 }
@@ -152,16 +160,31 @@ export default {
 }
 .list-group-item {
   margin-bottom: 5px;
+  /* background-color: #d6dbdf; */
+  background: rgba(253, 254, 254, 0.7);
 }
 .list-group-item:hover {
   background: #eee;
   cursor: pointer;
+}
+.book-title {
+  color: #34495e;
 }
 .details {
   font-size: 14px;
 }
 .delete-icon:hover {
   color: red;
+}
+@media only screen and (max-width: 1000px) {
+  .list-group-item {
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .list-group-item {
+    font-size: 11.5px;
+  }
 }
 </style>
 

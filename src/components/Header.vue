@@ -1,7 +1,8 @@
 <template>
   <div id="header-container">
+    <img class="booj-logo" src="http://www.booj.com/img/booj-triangle.png" alt>
     <h1>{{ title }}</h1>
-    <h5>{{ slogan }}</h5>
+    <!-- <h5>{{ slogan }}</h5> -->
   </div>
 </template>
 
@@ -17,8 +18,10 @@ export default {
 
 <style scoped>
 #header-container {
-  background-color: #c81c20;
   color: white;
+}
+.booj-logo {
+  width: 15%;
 }
 </style>
 

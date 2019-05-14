@@ -9,6 +9,7 @@
         </b-col>
       </b-row>
     </b-container>
+    <div style="height:50px;"></div>
   </div>
 </template>
 

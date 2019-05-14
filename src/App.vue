@@ -18,8 +18,15 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  background-image: url("http://www.booj.com/img/ninja-home.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow: scroll;
 }
 .home-button {
-  color: grey;
+  color: white;
+}
+.home-button:hover {
+  color: gold;
 }
 </style>

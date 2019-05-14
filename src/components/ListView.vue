@@ -179,6 +179,10 @@ export default {
 .delete-icon:hover {
   color: red;
 }
+.row {
+  margin-left: -15px !important;
+  margin-right: -15px !important;
+}
 @media only screen and (max-width: 1000px) {
   .list-group-item {
     font-size: 13px;

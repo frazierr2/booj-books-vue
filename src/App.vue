@@ -19,9 +19,11 @@
   text-align: center;
   color: #2c3e50;
   background-image: url("http://www.booj.com/img/ninja-home.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  overflow: scroll;
+  padding-bottom: 40px;
+}
+.row {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 .home-button {
   color: white;

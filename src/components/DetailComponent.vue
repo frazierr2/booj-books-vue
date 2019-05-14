@@ -72,7 +72,7 @@ export default {
   width: 15%;
 }
 #detail-container {
-  height: 100vh;
+  /* height: 100vh; */
 }
 #details-title {
   color: white;

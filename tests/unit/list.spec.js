@@ -23,12 +23,5 @@ describe('ListView.vue', () => {
         expect(wrapper.vm.shuffledBooks).toHaveLength(0)
     })
 
-    // it('arrays should match ', () => {
-    //     const wrapper = shallowMount(ListView, {})
-    //     // expect(wrapper.vm.form).toHaveLength(0)
-    //     expect(wrapper.vm.shuffledBooks)
-    //     //   expect(wrapper.text()).toMatch(title)
-    // })
-
 
 })

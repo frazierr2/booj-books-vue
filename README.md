@@ -1,6 +1,25 @@
-# booj-books-vue
+# booj coding challenge:
 
-## Project setup
+Expected results:
+
+- Find a publically available open API and Create a Vue app 
+
+-  Add or remove from the list
+
+- Change the order of the items in the list
+
+- Sort the list of books by a criteria
+
+- Display a book page with a minimum of 3 data points
+
+- Include unit tests
+
+- Deploy it on the cloud
+
+
+
+
+### Project setup
 ```
 npm install
 ```

@@ -10,4 +10,10 @@ describe('Header.vue', () => {
     expect(wrapper.text()).toMatch(title)
   })
 
+
+  it('should have image in header for logo', () => {
+    const wrapper = shallowMount(Header)
+    expect(wrapper.findAll('img').exists()).toBe(true)
+  })
+
 })

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header :title="title" :slogan="slogan"/>
+    <Header :title="title"/>
 
     <b-container class="bv-example-row">
       <b-row>
@@ -26,11 +26,11 @@ export default {
   data() {
     return {
       title: "booj books",
-      slogan: "be original or jealous",
       bookResults: []
     };
   },
   mounted() {
+    // Fetch data but have to add a cors anywhere set up due to cors error. Prefixing the link solved this issue
     fetch(
       "https://cors-anywhere.herokuapp.com/https://www.librarything.com/api_getdata.php?userid=timspalding&showstructure=1&max=20&showCollections=1&showTags=1&booksort=title_REV&responseType=json",
       {

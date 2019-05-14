@@ -93,6 +93,7 @@ export default {
     }
   },
   methods: {
+    //Adding new book and resetting form
     addNewBook(evt) {
       evt.preventDefault();
       let newBookObject = JSON.stringify(this.form);
@@ -104,21 +105,23 @@ export default {
       this.form.publicationdate = "";
       this.form.rating = "";
     },
+    // Gets object by index and passes to detail view to display more data
     getDetails(index) {
-      //   console.log(this.shuffledBooks[index]);
       let bookDetails = this.shuffledBooks[index];
-      //   console.log(bookDetails.cover);
       this.$router.push({
         name: "details",
         params: { id: bookDetails }
       });
     },
+    //Delete Row based on index in shuffled array
     deleteRow(index) {
       this.$delete(this.shuffledBooks, index);
     },
+    // Shuffle get response to change order of list.
     shuffleBooks() {
       this.shuffledBooks = _.shuffle(this.bookResults);
     },
+    // Below are four function to sort / change view based on user input
     sortTitle() {
       this.shuffledBooks = _.sortBy(this.shuffledBooks, book => book.title);
     },

@@ -11,7 +11,11 @@
       <b-dropdown-divider></b-dropdown-divider>
       <b-dropdown-item @click="reverseList">Reverse List</b-dropdown-item>
     </b-dropdown>
-    <b-button variant="outline-danger" @click="newBookForm = !newBookForm">Add New Book</b-button>
+    <b-button
+      class="addButton"
+      variant="outline-danger"
+      @click="newBookForm = !newBookForm"
+    >Add New Book</b-button>
 
     <div v-if="newBookForm">
       <b-form inline @submit="addNewBook">
@@ -43,11 +47,7 @@
     </div>
 
     <b-list-group>
-      <b-list-group-item
-        v-for="(book, index) in shuffledBooks"
-        :key="index"
-        @mouseover="selectedRow(index)"
-      >
+      <b-list-group-item v-for="(book, index) of shuffledBooks" :key="index">
         <b-row>
           <b-col cols="9">{{ book.title }}</b-col>
           <b-col cols="3" v-show="isHovered">
@@ -75,7 +75,6 @@ export default {
     return {
       isHovered: true,
       shuffledBooks: [],
-      results: [],
       newBookForm: false,
       form: {
         title: "",
@@ -86,7 +85,6 @@ export default {
       }
     };
   },
-  computed: {},
   watch: {
     bookResults: {
       immediate: true,
@@ -116,19 +114,11 @@ export default {
         params: { id: bookDetails }
       });
     },
-    selectedRow(index) {
-      this.bookResults[index];
-      //   console.log(this.bookResults[index]);
-    },
-    // showDetails(index) {
-    //   console.log(index);
-    // },
     deleteRow(index) {
       this.$delete(this.shuffledBooks, index);
     },
     shuffleBooks() {
-      let books = [...this.bookResults];
-      this.shuffledBooks = _.shuffle(books);
+      this.shuffledBooks = _.shuffle(this.bookResults);
     },
     sortTitle() {
       this.shuffledBooks = _.sortBy(this.shuffledBooks, book => book.title);

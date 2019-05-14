@@ -2,7 +2,7 @@
   <div id="app">
     <b-nav>
       <b-nav-item>
-        <router-link to="/booj-books-vue/" class="home-button">Home</router-link>
+        <router-link to="/" class="home-button">Home</router-link>
       </b-nav-item>
     </b-nav>
 

@@ -8,7 +8,7 @@
         <img class="book-image" :src="bookDetails.cover ? bookDetails.cover : noImage ">
       </b-col>
 
-      <b-col style="margin-top:5%;" cols="12" md="6">
+      <b-col style="margin-top:3%;" cols="12" md="6">
         <b-row>
           <b-col>
             <h2>

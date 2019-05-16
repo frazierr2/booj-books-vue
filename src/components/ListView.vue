@@ -104,6 +104,7 @@ export default {
       this.form.author_fl = "";
       this.form.publicationdate = "";
       this.form.rating = "";
+      this.form.cover = "";
     },
     // Gets object by index and passes to detail view to display more data
     getDetails(index) {
@@ -160,6 +161,8 @@ export default {
 }
 .list-group {
   margin-top: 15px;
+  border: 4px solid white;
+  padding: 10px;
 }
 .list-group-item {
   margin-bottom: 5px;
